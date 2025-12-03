@@ -19,7 +19,7 @@ public class SignUp extends BaseTest {
 
     @Test
     public void signUpWithValidInputs() {
-        goToRegisterPage();  // Use the helper method
+        goToRegisterPage();  
         driver.findElement(By.id("gender-male")).click();
         driver.findElement(By.id("FirstName")).sendKeys("sona");
         driver.findElement(By.id("LastName")).sendKeys("sk");
@@ -43,7 +43,7 @@ public class SignUp extends BaseTest {
      goToRegisterPage();
      driver.findElement(By.id("FirstName")).sendKeys("Sona");
      driver.findElement(By.id("LastName")).sendKeys("Bazi");
-     driver.findElement(By.id("Email")).sendKeys("cmsautomation2025@gmail.com"); // existing email
+     driver.findElement(By.id("Email")).sendKeys("cmsautomation2025@gmail.com"); 
      driver.findElement(By.id("Password")).sendKeys("Cms@12345");
      driver.findElement(By.id("ConfirmPassword")).sendKeys("Cms@12345");
      driver.findElement(By.id("register-button")).click();
@@ -92,13 +92,13 @@ public class SignUp extends BaseTest {
         driver.findElement(By.className("ico-register")).click();
         driver.findElement(By.id("FirstName")).sendKeys("Sona");
         driver.findElement(By.id("LastName")).sendKeys("Bazi");
-        driver.findElement(By.id("Email")).sendKeys("invalidemail"); // invalid email
+        driver.findElement(By.id("Email")).sendKeys("invalidemail"); 
         driver.findElement(By.id("Password")).sendKeys("Test@1234");
         driver.findElement(By.id("ConfirmPassword")).sendKeys("Test@1234");
         driver.findElement(By.id("register-button")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement emailError = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[data-valmsg-for='Email']")));
-        Assert.assertEquals(emailError.getText(), "Wrong email"); // Update the expected error message
+        Assert.assertEquals(emailError.getText(), "Wrong email"); 
     }
 }
 
