@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Dec 03 15:21:33 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>171 seconds (171356 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cms.SessionNavigation.verifyLoginRequiredForContactList()'><b>verifyLoginRequiredForContactList</b><br>Test class: cms.SessionNavigation</td>
+<td></td>
+<td>3</td>
+<td>cms.SessionNavigation@2de23121</td></tr>
+<tr>
+<td title='cms.Edit.editAddressTest()'><b>editAddressTest</b><br>Test class: cms.Edit</td>
+<td></td>
+<td>4</td>
+<td>cms.Edit@4988d8b8</td></tr>
+<tr>
+<td title='cms.Login.loginWithEmptyFields()'><b>loginWithEmptyFields</b><br>Test class: cms.Login</td>
+<td></td>
+<td>1</td>
+<td>cms.Login@2cd76f31</td></tr>
+<tr>
+<td title='cms.SignUp.signUpWithBlankFields()'><b>signUpWithBlankFields</b><br>Test class: cms.SignUp</td>
+<td></td>
+<td>1</td>
+<td>cms.SignUp@22fcf7ab</td></tr>
+<tr>
+<td title='cms.SessionNavigation.verifyCannotGoBackToContactListAfterLogout()'><b>verifyCannotGoBackToContactListAfterLogout</b><br>Test class: cms.SessionNavigation</td>
+<td></td>
+<td>19</td>
+<td>cms.SessionNavigation@2de23121</td></tr>
+<tr>
+<td title='cms.UIResponsivenessTest.verifyFieldAlignmentOnContactForm()'><b>verifyFieldAlignmentOnContactForm</b><br>Test class: cms.UIResponsivenessTest</td>
+<td></td>
+<td>0</td>
+<td>cms.UIResponsivenessTest@c0c2f8d</td></tr>
+<tr>
+<td title='cms.SignUp.signUpInvalidEmail()'><b>signUpInvalidEmail</b><br>Test class: cms.SignUp</td>
+<td></td>
+<td>1</td>
+<td>cms.SignUp@22fcf7ab</td></tr>
+<tr>
+<td title='cms.AddItemsCart.addMultipleItemsToCart()'><b>addMultipleItemsToCart</b><br>Test class: cms.AddItemsCart</td>
+<td></td>
+<td>4</td>
+<td>cms.AddItemsCart@63475ace</td></tr>
+<tr>
+<td title='cms.Login.loginWithValidCredentials()'><b>loginWithValidCredentials</b><br>Test class: cms.Login</td>
+<td></td>
+<td>3</td>
+<td>cms.Login@2cd76f31</td></tr>
+<tr>
+<td title='cms.AddItemsCart.addSingleItemToCart()'><b>addSingleItemToCart</b><br>Test class: cms.AddItemsCart</td>
+<td></td>
+<td>2</td>
+<td>cms.AddItemsCart@63475ace</td></tr>
+<tr>
+<td title='cms.UIResponsivenessTest.verifyUnicodeSupportInAddressField()'><b>verifyUnicodeSupportInAddressField</b><br>Test class: cms.UIResponsivenessTest</td>
+<td></td>
+<td>0</td>
+<td>cms.UIResponsivenessTest@c0c2f8d</td></tr>
+<tr>
+<td title='cms.SignUp.signUpWithExistingEmail()'><b>signUpWithExistingEmail</b><br>Test class: cms.SignUp</td>
+<td></td>
+<td>2</td>
+<td>cms.SignUp@22fcf7ab</td></tr>
+<tr>
+<td title='cms.Login.loginWithInvalidPassword()'><b>loginWithInvalidPassword</b><br>Test class: cms.Login</td>
+<td></td>
+<td>2</td>
+<td>cms.Login@2cd76f31</td></tr>
+<tr>
+<td title='cms.SignUp.signUpPasswordMismatch()'><b>signUpPasswordMismatch</b><br>Test class: cms.SignUp</td>
+<td></td>
+<td>1</td>
+<td>cms.SignUp@22fcf7ab</td></tr>
+<tr>
+<td title='cms.SessionNavigation.verifyLoginStateOnRefresh()'><b>verifyLoginStateOnRefresh</b><br>Test class: cms.SessionNavigation</td>
+<td></td>
+<td>17</td>
+<td>cms.SessionNavigation@2de23121</td></tr>
+<tr>
+<td title='cms.AddItemsCart.addItemWithoutLogin()'><b>addItemWithoutLogin</b><br>Test class: cms.AddItemsCart</td>
+<td></td>
+<td>3</td>
+<td>cms.AddItemsCart@63475ace</td></tr>
+<tr>
+<td title='cms.SignUp.signUpWithValidInputs()'><b>signUpWithValidInputs</b><br>Test class: cms.SignUp</td>
+<td></td>
+<td>4</td>
+<td>cms.SignUp@22fcf7ab</td></tr>
+<tr>
+<td title='cms.Login.loginWithInvalidEmailFormat()'><b>loginWithInvalidEmailFormat</b><br>Test class: cms.Login</td>
+<td></td>
+<td>11</td>
+<td>cms.Login@2cd76f31</td></tr>
+<tr>
+<td title='cms.Login.verifyPasswordIsMasked()'><b>verifyPasswordIsMasked</b><br>Test class: cms.Login</td>
+<td></td>
+<td>0</td>
+<td>cms.Login@2cd76f31</td></tr>
+<tr>
+<td title='cms.Edit.loginTest()'><b>loginTest</b><br>Test class: cms.Edit</td>
+<td></td>
+<td>1</td>
+<td>cms.Edit@4988d8b8</td></tr>
+</table><p>
+</body>
+</html>
