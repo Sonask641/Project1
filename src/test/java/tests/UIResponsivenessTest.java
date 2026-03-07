@@ -1,9 +1,11 @@
-package cms;
+package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import base.BaseTest;
 
 public class UIResponsivenessTest extends BaseTest {
 

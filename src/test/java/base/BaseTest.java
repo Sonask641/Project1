@@ -1,4 +1,4 @@
-package cms;
+package base;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
