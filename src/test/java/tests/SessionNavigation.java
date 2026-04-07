@@ -1,5 +1,4 @@
-package pages;
-
+package tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,9 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import base.BaseTest;
+
 import java.time.Duration;
 
-public class SessionNavigation {
+public class SessionNavigation extends BaseTest {
 
     private WebDriver driver;
     private WebDriverWait wait;

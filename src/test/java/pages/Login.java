@@ -2,47 +2,54 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class Login {
 
     WebDriver driver;
 
-    // Constructor
+    // Locators used
+    By loginLink = By.linkText("Log in");              // nav link on header
+    By usernameField = By.id("Email");                // email input
+    By passwordField = By.id("Password");             // password input
+    By loginButton = By.xpath("//input[@value='Log in']"); // login button
+    By logoutLink = By.linkText("Log out");           // logout link when logged in
+    By errorMessage = By.cssSelector("div.validation-summary-errors"); // error block
+
     public Login(WebDriver driver) {
         this.driver = driver;
     }
 
-    // Locators
-    private By loginLink = By.className("ico-login");
-    private By emailField = By.id("Email");
-    private By passwordField = By.id("Password");
-    private By loginButton = By.cssSelector("input.login-button");
-    private By logoutLink = By.className("ico-logout");
-    private By errorMsg = By.cssSelector("div.validation-summary-errors");
-
-    // Navigate to login page
+    // Navigate to Login page
     public void goToLoginPage() {
         driver.findElement(loginLink).click();
     }
 
-    // Login action
-    public void login(String email, String password) {
-        driver.findElement(emailField).clear();
-        driver.findElement(emailField).sendKeys(email);
-
+    // Enter credentials and submit
+    public void login(String username, String password) {
+        driver.findElement(usernameField).clear();
+        driver.findElement(usernameField).sendKeys(username);
         driver.findElement(passwordField).clear();
         driver.findElement(passwordField).sendKeys(password);
-
         driver.findElement(loginButton).click();
     }
 
-    // Check logout visible (successful login)
+    // Check if Logout link is displayed
     public boolean isLogoutDisplayed() {
-        return driver.findElement(logoutLink).isDisplayed();
+        try {
+            WebElement logout = driver.findElement(logoutLink);
+            return logout.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
-    // Get error message
+    // Get error text if login fails
     public String getErrorMessage() {
-        return driver.findElement(errorMsg).getText();
+        try {
+            return driver.findElement(errorMessage).getText();
+        } catch (Exception e) {
+            return "";
+        }
     }
 }

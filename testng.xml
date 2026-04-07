@@ -1,0 +1,32 @@
+<suite name="DemoWebShopSuite">
+    <test name="LoginTests">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    <test name="CartTests">
+        <classes>
+            <class name="tests.AddItemsCart"/>
+        </classes>
+    </test>
+    <test name="EditTests">
+        <classes>
+            <class name="tests.Edit"/>
+        </classes>
+    </test>
+    <test name="SessionTests">
+        <classes>
+            <class name="tests.SessionNavigation"/>
+        </classes>
+    </test>
+    <test name="UIResponsivenessTests">
+        <classes>
+            <class name="tests.UIResponsivenessTest"/>
+        </classes>
+    </test>
+    <test name="SignUpTests">
+        <classes>
+            <class name="tests.SignUp"/>
+        </classes>
+    </test>
+</suite>

@@ -1,4 +1,4 @@
-package pages;
+package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,11 +13,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 import java.util.List;
 
-public class Edit {
+public class Edit extends BaseTest {
 
     WebDriver driver;
     WebDriverWait wait;
