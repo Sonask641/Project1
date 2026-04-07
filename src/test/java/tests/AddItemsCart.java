@@ -59,7 +59,7 @@ public class AddItemsCart extends BaseTest {
             if (button.isDisplayed() && button.isEnabled()) {
                 button.click();
                 expectedQty++;
-                // Wait until cart updates
+                
                 int finalExpectedQty = expectedQty;
                 wait.until(d -> getCartQuantity() == finalExpectedQty);
             }

@@ -15,13 +15,12 @@ public class ExcelUtils {
     // Set Excel file and sheet
     public static void setExcelFile() throws Exception {
         FileInputStream file = new FileInputStream(
-            "C:\\latestEclipse\\ContactManagementAutomation\\TestData\\LoginData.xlsx"
-        );
+        		"C:\\latestEclipse\\ContactMnagementAutomation\\TestData\\LoginData.xlsx"        );
         workbook = new XSSFWorkbook(file);
-        sheet = workbook.getSheet("Sheet1"); // make sure sheet name matches your Excel
+        sheet = workbook.getSheet("Sheet1"); 
     }
 
-    // Get data from Excel cell
+    
     public static String getCellData(int rowNum, int colNum) throws Exception {
         Row row = sheet.getRow(rowNum);
         if(row == null) {
@@ -34,7 +33,7 @@ public class ExcelUtils {
         return cell.toString();
     }
 
-    // Write data to Excel cell
+    
     public static void setCellData(String value, int rowNum, int colNum) throws Exception {
         Row row = sheet.getRow(rowNum);
         if(row == null) {
@@ -47,8 +46,7 @@ public class ExcelUtils {
         cell.setCellValue(value);
 
         FileOutputStream fileOut = new FileOutputStream(
-            "C:\\latestEclipse\\ContactManagementAutomation\\TestData\\LoginData.xlsx"
-        );
+        		"C:\\latestEclipse\\ContactMnagementAutomation\\TestData\\LoginData.xlsx"        );
         workbook.write(fileOut);
         fileOut.close();
     }
