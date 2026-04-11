@@ -3,62 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AddItemsCart">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addMultipleItemsToCart"/>
-          <include name="addSingleItemToCart"/>
-          <include name="addItemWithoutLogin"/>
-        </methods>
-      </class> <!-- tests.AddItemsCart -->
-      <class name="tests.SessionNavigation">
-        <methods>
-          <include name="setup"/>
-          <include name="setUp"/>
-          <include name="verifyLoginRequiredForContactList"/>
-          <include name="tearDown"/>
-          <include name="verifyLoginStateOnRefresh"/>
-          <include name="verifyCannotGoBackToContactListAfterLogout"/>
-        </methods>
-      </class> <!-- tests.SessionNavigation -->
-      <class name="tests.UIResponsivenessTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="verifyUnicodeSupportInAddressField"/>
-          <include name="verifyFieldAlignmentOnContactForm"/>
-        </methods>
-      </class> <!-- tests.UIResponsivenessTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="setup"/>
-          <include name="loginWithInvalidPassword"/>
           <include name="tearDown"/>
+          <include name="loginWithInvalidPassword"/>
           <include name="loginWithValidCredentials"/>
           <include name="loginWithEmptyFields"/>
         </methods>
       </class> <!-- tests.LoginTest -->
-      <class name="tests.SignUp">
-        <methods>
-          <include name="setup"/>
-          <include name="signUpPasswordMismatch"/>
-          <include name="tearDown"/>
-          <include name="signUpWithExistingEmail"/>
-          <include name="signUpWithBlankFields"/>
-          <include name="signUpInvalidEmail"/>
-          <include name="signUpWithValidInputs"/>
-        </methods>
-      </class> <!-- tests.SignUp -->
-      <class name="tests.Edit">
-        <methods>
-          <include name="tearDown"/>
-          <include name="loginTest"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="editAddressTest"/>
-        </methods>
-      </class> <!-- tests.Edit -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

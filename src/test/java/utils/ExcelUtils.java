@@ -1,9 +1,8 @@
 package utils;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
+import java.io.IOException;
+
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -12,48 +11,35 @@ public class ExcelUtils {
     private static XSSFWorkbook workbook;
     private static XSSFSheet sheet;
 
-    // Set Excel file and sheet
     public static void setExcelFile() throws Exception {
-        FileInputStream file = new FileInputStream(
-        		"C:\\latestEclipse\\ContactMnagementAutomation\\TestData\\LoginData.xlsx"        );
-        workbook = new XSSFWorkbook(file);
-        sheet = workbook.getSheet("Sheet1"); 
+
+        String excelPath = System.getProperty("user.dir")
+                + "/src/test/resources/TestData/LoginData.xlsx";
+
+        FileInputStream fis = new FileInputStream(excelPath);
+
+        workbook = new XSSFWorkbook(fis);
+        sheet = workbook.getSheetAt(0);
     }
 
-    
-    public static String getCellData(int rowNum, int colNum) throws Exception {
-        Row row = sheet.getRow(rowNum);
-        if(row == null) {
+    public static String getCellData(int rowNum, int colNum) {
+
+        if (sheet.getRow(rowNum) == null) {
             return "";
         }
-        Cell cell = row.getCell(colNum);
-        if(cell == null) {
+
+        if (sheet.getRow(rowNum).getCell(colNum) == null) {
             return "";
         }
-        return cell.toString();
+
+        return sheet.getRow(rowNum)
+                .getCell(colNum)
+                .toString();
     }
 
-    
-    public static void setCellData(String value, int rowNum, int colNum) throws Exception {
-        Row row = sheet.getRow(rowNum);
-        if(row == null) {
-            row = sheet.createRow(rowNum);
-        }
-        Cell cell = row.getCell(colNum);
-        if(cell == null) {
-            cell = row.createCell(colNum);
-        }
-        cell.setCellValue(value);
+    public static void closeWorkbook() throws IOException {
 
-        FileOutputStream fileOut = new FileOutputStream(
-        		"C:\\latestEclipse\\ContactMnagementAutomation\\TestData\\LoginData.xlsx"        );
-        workbook.write(fileOut);
-        fileOut.close();
-    }
-
-    // Close workbook
-    public static void closeWorkbook() throws Exception {
-        if(workbook != null) {
+        if (workbook != null) {
             workbook.close();
         }
     }

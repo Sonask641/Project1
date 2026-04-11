@@ -23,8 +23,10 @@ public class LoginTest extends BaseTest {
             loginPage.goToLoginPage();
             loginPage.login(username, password);
 
-            Assert.assertTrue(loginPage.isLogoutDisplayed(),
-                    "Login failed with valid credentials");
+            Assert.assertTrue(
+                    loginPage.isLogoutDisplayed(),
+                    "Login failed with valid credentials"
+            );
 
         } finally {
             ExcelUtils.closeWorkbook();
@@ -78,8 +80,7 @@ public class LoginTest extends BaseTest {
                     "Validation message not shown for empty fields"
             );
 
-        }
-        finally {
+        } finally {
             ExcelUtils.closeWorkbook();
         }
     }
